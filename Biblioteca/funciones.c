@@ -8,6 +8,14 @@
 #define LIBRE 1
 #define OCUPADO 0
 
+//generar id automaticamente
+static int generarIdNuevo()
+{
+    static int idUsuario = 0;
+    idUsuario++;
+    return idUsuario;
+}
+
 
 
 //FUNCION INICIALIZAR ARRAY EN LIBRE
@@ -122,6 +130,17 @@ int anadirEmpleadoMan(aEstructura lista[], int tam, int id, char nombre[], char 
 
                sector = getValidInt("Ingrese el sector (0 a 50): ", "Debe ser un numero.",0,50);
                lista[hayLugar].sector = sector;
+
+               //si trabajo con otra estructura por ej fecha;
+
+              /* printf("Ingrese fecha de nacimiento: ");
+                scanf("%d",&lista[index].feNac.dia);
+
+               printf("Ingrese mes de nacimiento: ");
+               scanf("%d",&lista[index].feNac.mes);
+
+               printf("Ingrese anio de nacimiento: ");
+               scanf("%d",&lista[index].feNac.anio);*/
 
                lista[hayLugar].estado = OCUPADO;
 

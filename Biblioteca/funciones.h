@@ -1,6 +1,20 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
+typedef struct {
+    int dia, mes, anio;
+}EFecha;
+
+typedef struct {
+    char apellido[51];
+    char nombre[511];
+    int id;
+    float sueldo;
+    int sector;
+    EFecha feNac;
+    int estado;
+}aEstructura;
+
 int initArrayEstructura(aEstructura lista[], int tam);
 int buscarLugarLibre(aEstructura lista[], int tam);
 int generarId(aEstructura lista[],int tam);
